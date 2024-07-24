@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la página */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+body.light-mode {
+    background-image: url('ArchivosPaginaWeb/Claro.jpg'); /* Imagen de fondo para el modo claro */
+    background-color: #87CEEB; /* Color celeste */
+    color: #000;
+}
+
+body.dark-mode {
+    background-image: url('ArchivosPaginaWeb/Coscuro.jpg'); /* Imagen de fondo para el modo oscuro */
+    background-color: #121212; /* Color oscuro */
+    color: #fff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+.main-wrapper {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+    margin: 20px; /* Espacio alrededor del contenedor principal y de texto */
+    gap: 20px; /* Espacio entre el contenedor principal y el contenedor de texto */
+}
+
+.container, .text-container {
+    width: 800px; /* Ancho fijo para ambos contenedores */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #000; /* Borde negro alrededor de cada tarjeta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    background-color: #f8d99b; /* Color de la tarjeta para el contenedor principal */
+}
+
+.text-container {
+    background-color: #fff; /* Fondo blanco para el contenedor de texto */
+    display: flex;
+    flex-direction: column; /* Alinea el texto verticalmente */
+    justify-content: flex-start; /* Alinea el texto al principio (parte superior) del contenedor */
+    height: 600px; /* Ajusta la altura para que sea mayor que el contenedor principal */
+}
+
+body.dark-mode .container {
+    background-color: #000; /* Fondo negro para el contenedor en modo oscuro */
+    border-color: #fff; /* Borde blanco en modo oscuro */
+}
+
+body.dark-mode .text-container {
+    background-color: #333; /* Fondo gris oscuro para el contenedor de texto en modo oscuro */
+    border-color: #fff; /* Borde blanco en modo oscuro */
+}
+
+.content {
+    display: flex;
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.image-card, .video-card {
+    width: 45%;
+    padding: 10px;
+    background-color: #f8d99b; /* Color de la tarjeta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 2px solid #000; /* Borde negro alrededor de cada tarjeta */
+    overflow: hidden;
+}
+
+body.dark-mode .image-card,
+body.dark-mode .video-card {
+    background-color: #000; /* Fondo negro para tarjetas en modo oscuro */
+    border-color: #fff; /* Borde blanco en modo oscuro */
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 480px;
+    border: none;
+    border-radius: 8px;
+}
+
+.text-container p {
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1.6;
+}
+
+.subscribe-button {
+    position: relative;
+    text-align: center;
+}
+
+.subscribe-button a {
+    display: inline-block;
+}
+
+.subscribe-button img {
+    width: 150px; /* Ajusta el tamaño del botón según tus necesidades */
+    height: auto;
+    border: 2px solid #000; /* Borde negro alrededor del botón */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px; /* Ajusta el margen para posicionar el botón */
+}
+
+.subscribe-button img:hover {
+    transform: scale(1.05); /* Efecto de escalado al pasar el mouse */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el mouse */
+}
+
+body.dark-mode .subscribe-button img {
+    border-color: #fff; /* Borde blanco en modo oscuro */
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+.youtube-icon {
+    color: #ff0000; /* Color rojo para YouTube */
+}
+
+.facebook-icon {
+    color: #3b5998; /* Color azul para Facebook */
+}
+
+.tiktok-icon {
+    color: #000; /* Color negro para TikTok */
+}
+
+body.dark-mode .social-links a {
+    color: #fff; /* Texto blanco en modo oscuro */
+}
+
+body.dark-mode .social-links a:hover {
+    color: #007bff; /* Color al pasar el mouse en modo oscuro */
+}
+
+.mode-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mode-buttons button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.mode-buttons button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra al pasar el mouse */
+}
